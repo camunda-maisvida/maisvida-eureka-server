@@ -1,0 +1,14 @@
+---
+applications:
+- name: maisvida-eureka-server
+  memory: 1024M
+  instances: 1
+  routes:
+  - route: maisvida-eureka-server.cfapps.io
+  env:
+    DEBUG: "true"
+    debug: "true"
+    config.server.password: qwe123
+    config.server.user: usr_app_configuration
+    EUREKA_URI: https://maisvida-eureka-server.cfapps.io/eureka/
+    APPLICATION_DOMAIN: maisvida-eureka-server.cfapps.io
